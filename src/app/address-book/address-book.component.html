@@ -1,0 +1,13 @@
+<div class = "address-book">
+  <h1 class = "name">{{ user.name }}</h1>
+  <h2 class = "designation">{{ user.designation }}</h2>
+  <button (click) = "toggleButtonClick()" *ngIf = "isCollapsed">Expand</button>
+  <button (click) = "toggleButtonClick()" *ngIf = "!isCollapsed">Collapse</button>
+  <div *ngIf = "!isCollapsed">
+     <h4 class = "address">{{ user.address }}</h4>
+     <div class = "phone" *ngIf = "user.phone.length">
+       <p>Phone : </p>
+      <p *ngFor = "let phoneNumber of user.phone">{{ phoneNumber }}</p>
+      </div>
+    </div>
+</div>
