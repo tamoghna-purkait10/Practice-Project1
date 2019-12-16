@@ -11,6 +11,8 @@ import { User } from './address-book/user.model';
 export class AppComponent  {
 
   user : User;
+  inputText : string = "Initial value"
+
   
   constructor(){
     this.user = new User();
